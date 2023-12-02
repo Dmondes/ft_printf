@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "printf.h"
 
 int	find_format(char c, va_list args);
 
