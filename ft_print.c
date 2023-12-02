@@ -51,3 +51,70 @@ int	find_format(char c, va_list args)
 	else if (c == '%')
 		count += ft_ppercent();
 	return (count);
+}
+
+int	ft_pchar(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_pstr(char *str)
+{
+	int	count;
+
+	count = 0;
+	str ++;
+	return (count);
+}
+
+int	ft_pint(int n)
+{
+	int	count;
+
+	count = 0;
+	n ++;
+	return (count);
+}
+
+int	ft_punsign(unsigned int n)
+{
+	int	count;
+
+	count = 0;
+	n ++;
+	return (count);
+}
+
+int	ft_ppoint(unsigned int n)
+{
+	int	count;
+
+	count = 0;
+	n ++;
+	return (count);
+}
+
+int	ft_plower(unsigned int n)
+{
+	int	count;
+
+	count = 0;
+	n ++;
+	return (count);
+}
+
+int	ft_ppercent(void)
+{
+	write(1, "%", 1);
+	return (1);
+}
+
+int	ft_pupper(unsigned int n)
+{
+	int	count;
+
+	count = 0;
+	n ++;
+	return (count);
+}
