@@ -6,19 +6,22 @@ int	ft_pchar(char c)
 	return (write(1, &c, 1));
 }
 
-int	ft_pstr(char *str)
+int     ft_pstr(char *str)
 {
-	int	count;
+        int     count;
 
-	count = 0;
-	while (*str)
-	{
-		ft_pchar(*str);
-		count ++;
-		str ++;
-	}
-	return (count);
+        count = 0;
+        if (str == NULL)
+                return (ft_pstr("(null)"));
+        while (*str)
+        {
+                ft_pchar(*str);
+                count ++;
+                str ++;
+        }
+        return (count);
 }
+
 
 int ft_pint(int n)
 {
