@@ -1,0 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: delim <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/29 11:42:44 by delim             #+#    #+#             */
+/*   Updated: 2023/10/29 11:50:15 by delim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	if (!dest && !src)
+		return (NULL);
+	while (i < n)
+	{
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		i ++;
+	}
+	return (dest);
+}
+// Check for null ptr in dest and src
+// blk of memory does not have '\0' like string to signal the end
