@@ -151,7 +151,7 @@ int	ft_pupper(unsigned int n)
 		return (upper_hex(n));
 	 else
     {
-        count += ft_plower(n / 16);
+        count += ft_pupper(n / 16);
         digit = '0' + (n % 16);
         ft_pchar(digit);
         return (count + 1);
