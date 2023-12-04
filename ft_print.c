@@ -49,9 +49,7 @@ int	ft_punsign(unsigned int n)
 	char digit;
 
 	count = 0;
-	if (n < 0)
-		return (0);
-    if (n >= 0 && n <= 9)
+    if (n <= 9)
     {
 		base = '0' + n;
         ft_pchar(base);
@@ -100,7 +98,7 @@ int	ft_plower(unsigned int n)
 	char digit;
 
 	count = 0;
-	if (n >=0 && n <= 9)
+	if (n <= 9)
 	{
 		base = '0' + n;
 		ft_pchar(base);
@@ -141,7 +139,7 @@ int	ft_pupper(unsigned int n)
 	char digit;
 
 	count = 0;
-	if (n >=0 && n <= 9)
+	if (n <= 9)
 	{
 		base = '0' + n;
 		ft_pchar(base);
