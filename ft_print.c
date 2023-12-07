@@ -25,31 +25,31 @@ int     ft_pstr(char *str)
 
 int ft_pint(int n)
 {
-    int count;
-	char base;
-	char digit;
+    	int count;
+	char 	base;
+	char 	digit;
 
 	count = 0;
     if (n >= 0 && n <= 9)
     {
-		base = '0' + n;
+	base = '0' + n;
         ft_pchar(base);
-        return 1; // Return 1 as only one digit is printed
+        return (1); // Return 1 as only one digit is printed
     }
     else
     {
         count += ft_pint(n / 10); // Accumulate the count returned by recursive calls
         digit = '0' + (n % 10);
         ft_pchar(digit);
-        return count + 1; // Increment count for the last digit
+        return (count + 1); // Increment count for the last digit
     }
 }
 
 int	ft_punsign(unsigned int n)
 {
-	 int count;
-	char base;
-	char digit;
+	int count;
+	char 	base;
+	char 	digit;
 
 	count = 0;
     if (n <= 9)
@@ -89,15 +89,17 @@ int ft_rehex(unsigned long int n)
         count += ft_rehex(n / 16);
         count += ft_rehex(n % 16);
     }
-    return count;
+    return (count);
 }
 
 int ft_ppoint(unsigned long int n) 
 {
-    int count = 0;
+    int count;
+	
+    count = 0;
     count += ft_pstr("0x");
     count += ft_rehex(n);
-    return count;
+    return (count);
 }
 
 
