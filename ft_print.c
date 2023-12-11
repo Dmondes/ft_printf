@@ -136,7 +136,6 @@ int	ft_plower(unsigned int n)
 {
 	int	count;
 	char base;
-	char digit;
 
 	count = 0;
 	if (n <= 9)
@@ -176,7 +175,6 @@ int	ft_pupper(unsigned int n)
 {
 	int	count;
 	char base;
-	char digit;
 
 	count = 0;
 	if (n <= 9)
