@@ -97,6 +97,11 @@ int ft_ppoint(unsigned long int n)
     int count;
 	
     count = 0;
+    if (n == 0)
+    {
+	    ft_pstr("(nil)");
+	    return (5);
+    }
     count += ft_pstr("0x");
     count += ft_rehex(n);
     return (count);
