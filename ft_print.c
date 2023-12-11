@@ -30,19 +30,26 @@ int ft_pint(int n)
 	char 	digit;
 
 	count = 0;
-    if (n >= 0 && n <= 9)
-    {
-	base = '0' + n;
-        ft_pchar(base);
-        return (1); // Return 1 as only one digit is printed
-    }
-    else
-    {
-        count += ft_pint(n / 10); // Accumulate the count returned by recursive calls
-        digit = '0' + (n % 10);
-        ft_pchar(digit);
-        return (count + 1); // Increment count for the last digit
-    }
+   	if (n == -2147483648)
+		return (count += ft_pstr("-2147483648"));
+	if (n < 0)
+    	{
+      		n = ft_negative(n);
+      		count += 1;
+    	}
+	if (n >= 0 && n <= 9)
+	{
+		base = '0' + n;
+		ft_pchar(base);
+		return (count + 1);
+	}
+	else
+	{
+		count += ft_pint(n / 10);
+		digit = '0' + (n % 10);
+		ft_pchar(digit);
+		return (count + 1);
+	}
 }
 
 int	ft_punsign(unsigned int n)
@@ -143,8 +150,7 @@ int	ft_plower(unsigned int n)
 	 else
     {
         count += ft_plower(n / 16);
-        digit = '0' + (n % 16);
-        ft_pchar(digit);
+        lower_hex(n % 16);
         return (count + 1);
     }
 }
@@ -184,8 +190,7 @@ int	ft_pupper(unsigned int n)
 	 else
     {
         count += ft_pupper(n / 16);
-        digit = '0' + (n % 16);
-        ft_pchar(digit);
+        upper_hex(n % 16);
         return (count + 1);
     }
 }
