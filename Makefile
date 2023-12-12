@@ -3,7 +3,8 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 #Source files
-SRCS = ft_printf.c
+SRCS = ft_printf.c ft_pchar.c ft_pstr.c ft_pint.c ft_punsign.c \
+       ft_ppoint.c ft_plower.c ft_pupper.c ft_ppercent.c
 
 #Object files
 OBJS = $(SRCS:.c=.o)
